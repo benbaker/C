@@ -1,0 +1,202 @@
+//Missing files test
+$ ./a.out Tools.txt Servers.txt 
+Game is missing one or some of the following Tools.txt, Servers.txt, or highscores.txt
+
+//START OF A GAME 
+$ ./a.out Tools.txt Servers.txt highscores.txt 
+
+Welcome to the Grid
+updating cyber deck....
+GAME HIGHSCORES:
+Player                    Score:
+Matt                      200
+Mattman                   196
+Jevin                     150
+Alex                      115
+Jarret                    100
+
+To win you need to score as
+many points possible before 10 turns
+Your Score: [100]
+
+Server Info:
+Name: APOLLO Type: U Str: 2
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 2 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 3
+After run server strength is [0]
+Successful RUN!
+Your Score: [131]
+
+Server Info:
+Name: ZEUS Type: E Str: ?
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 2 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 4
+FAILED RUN!
+After run server strength is [4]
+Failed attempt once more? (Y,N): Y
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 2 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 4
+To add one strength to the tool, it'll cost 10 points for each 1 strength
+Want to upgrade tool? (Y/N) ?: Y
+How much strength to add?: 3
+After run server strength is [0]
+Successful RUN!
+Your Score: [144]
+
+Server Info:
+Name: ZEUS Type: E Str: ?
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 1
+After run server strength is [0]
+Successful RUN!
+Your Score: [160]
+
+Server Info:
+Name: ARES Type: E Str: ?
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 4
+FAILED RUN!
+After run server strength is [5]
+Failed attempt once more? (Y,N): N
+Your Score: [160]
+
+Server Info:
+Name: POSEIDON Type: U Str: 2
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 4
+FAILED RUN!
+After run server strength is [2]
+Failed attempt once more? (Y,N): Y
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 2
+To add one strength to the tool, it'll cost 10 points for each 1 strength
+Want to upgrade tool? (Y/N) ?: N
+After run server strength is [0]
+Successful RUN!
+Your Score: [191]
+
+Server Info:
+Name: HADES Type: E Str: ?
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 4
+After run server strength is [0]
+Successful RUN!
+Your Score: [231]
+
+Server Info:
+Name: APOLLO Type: U Str: 1
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 5
+After run server strength is [0]
+Successful RUN!
+Your Score: [257]
+
+Server Info:
+Name: POSEIDON Type: U Str: 1
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 5
+After run server strength is [0]
+Successful RUN!
+Your Score: [304]
+
+Server Info:
+Name: POSEIDON Type: U Str: 1
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 5
+After run server strength is [0]
+Successful RUN!
+Your Score: [347]
+
+Server Info:
+Name: ARES Type: E Str: ?
+Tools stored in your deck
+
+(1) Name: PROMENTHEUS               Type: D  Str: 6 Cost: 20 
+(2) Name: HERCULES                  Type: B  Str: 5 Cost: 6 
+(3) Name: ACHILLES                  Type: B  Str: 4 Cost: 5 
+(4) Name: THESEUS                   Type: D  Str: 5 Cost: 0 
+(5) Name: THOR                      Type: B  Str: 2 Cost: 0 
+Tool to use: 1
+FAILED RUN!
+After run server strength is [7]
+Failed attempt once more? (Y,N): N
+Awesome, You survived
+YOUR FINAL SCORE: 327
+
+Enter name: Player1
+
+//END OF GAME 
+
+//Cat prints off the file contents use this to check if you sorted properly
+$ cat highscores.txt
+Player1 327
+Matt 200
+Mattman 196
+Jevin 150
+Alex 115
