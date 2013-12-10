@@ -1,6 +1,3 @@
-// Ben Baker
-// Lab 1 
-
 // Basic file i/o, arrays, and pointers
 
 #include <stdio.h>
