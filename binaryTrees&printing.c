@@ -9,7 +9,6 @@ typedef struct N{
 	struct N* right;
 }tree;
 
-
 tree * createBranch( int data );
 tree * addBranch(tree * root, tree * branch);
 tree * buildList( char *fileName );
@@ -23,10 +22,7 @@ int main( int argc, char * argv[] ) {
 	tree *root = buildList( argv[1] );
 	print_preorder(root);
 	print_inorder(root);
-
-
 }
-
 
 tree * buildList( char *fileName ){
 
@@ -36,14 +32,13 @@ tree * buildList( char *fileName ){
 	fscanf(f, "%d", &fileSize);
 
 	for(i=0;i<fileSize;i++) {
-
 		int data;
 		fscanf(f, "%d", &data );
 		root = addBranch( root, createBranch( data ) );
-
-	} fclose(f); return root;
+	} 
+	fclose(f); 
+	return root;
 }
-
 
 tree * createBranch( int data ) {
 
@@ -51,7 +46,6 @@ tree * createBranch( int data ) {
 	newBranch->left		= newBranch->right = NULL;
 	newBranch->data		= data;
 	return newBranch;
-
 }
 
 tree * addBranch(tree * root, tree * branch) {
@@ -62,27 +56,25 @@ tree * addBranch(tree * root, tree * branch) {
 	(root->data  < branch->data) ?
 	(root->right   = addBranch(root->right, branch), root):
 	branch;
-
 }
 
 void print_preorder(tree * root) {
-    if (root) {
-        printf("%d\n",root->data);
-        printf(".");
-        print_preorder(root->left);
-        printf(".");
-        print_preorder(root->right);
-    }
+	
+    	if (root) {
+	        printf("%d\n",root->data);
+	        printf(".");
+	        print_preorder(root->left);
+	        printf(".");
+	        print_preorder(root->right);
+    	}
 }
 
 void print_inorder(tree * root) {
-    if (root) {
-        print_inorder(root->left);
-        printf("%d\n",root->data);
-        print_inorder(root->right);
-    }
+	
+	if (root) {
+		print_inorder(root->left);
+		printf("%d\n",root->data);
+		print_inorder(root->right);
+	}
 }
-
-
-
 
