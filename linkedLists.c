@@ -162,10 +162,3 @@ Queue * deleteLastNode( Queue *head ) {
 int err(char *err) {
   printf("%s\n", err);
 } // end err()
-
-
-
-
-
-
-
