@@ -82,7 +82,6 @@ int readContent() {
         fscanf(in, "%s", customers[i].name);
         fscanf(in, "%f", &customers[i].amount);
         printf("%d\t%s\t%f\n", customers[i].account, customers[i].name, customers[i].amount);
-        
     }
     
     return customerCount;
@@ -104,8 +103,6 @@ void updateInfo(int size) {
         fscanf(upd, "%f", &updates[j].amount);
         
         printf("%d\t%f\n", updates[j].account, updates[j].amount);
-        
-        
         
         for (i=0;i<size;i++) {
             
@@ -152,7 +149,6 @@ void writeFile(int customerCount){
             richestDude = customers[i].name;
         }
         if (!poorest || customers[i].amount < poorest) {
-            
             poorest =  customers[i].amount;
             poorestDude = customers[i].name;
         }
