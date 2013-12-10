@@ -3,7 +3,6 @@
 #include <ctype.h>
 #include <string.h>
 
-
 #define MAX 15
 #define MAX_LENGTH 30
 
@@ -21,9 +20,6 @@ typedef struct {
     char name[MAX_LENGTH];
     float amount;
 } bank;
-
-
-
 
 // Make array from bank struct
 bank customers[MAX];
@@ -93,8 +89,6 @@ int readContent() {
     
 } // end readContent()
 
-
-
 void updateInfo(int size) {
     
     int j;
@@ -154,24 +148,16 @@ void writeFile(int customerCount){
         totalBank += customers[i].amount;
         
         if (customers[i].amount > richest) {
-            
             richest =  customers[i].amount;
             richestDude = customers[i].name;
-            
         }
-        
-        
-        
         if (!poorest || customers[i].amount < poorest) {
             
             poorest =  customers[i].amount;
             poorestDude = customers[i].name;
-            
         }
         
-        
     } // end for
-    
     
     fprintf(out,"%6d\t%15s\t%6lf\n", customers[i].account, customers[i].name, customers[i].amount);
     
@@ -184,32 +170,11 @@ void writeFile(int customerCount){
     fprintf(out, "\nCustomer with the highest amount in account is %s with %.2f", richestDude, richest);
     fprintf(out, "\nCustomer with the lowest amount in account is %s with %.2f", poorestDude, poorest);
     
-    
-    
-    
-    
 } // end writeFile()
 
-
-
-
-
-
-
-
-
-
-
 void closeFiles(){
-    
     fclose(in);
     fclose(out);
-    
 } // end closeFiles()
 
 
-// double star means an array of different char pointers
-
-~
-~
-~
