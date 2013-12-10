@@ -1,10 +1,7 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int main()
-{
+int main() {
 	int i, count, x, y, z;
 	int sum;
 	float average;
@@ -12,16 +9,10 @@ int main()
 	printf("\n Enter the count of numbers: ");
 	scanf("%d", &count);
 
-	for(i=0; i<count; i++)
-	{
+	for(i=0; i<count; i++) {
 		printf("\n %d", sum);
 		sum=sum+random();
 	}
-
 	average = sum / count;
 	printf("\n Average of numbers is %lf \n", average);
 }
-
-
-
-
