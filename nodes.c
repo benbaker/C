@@ -235,15 +235,3 @@ node *bigger(node *n1, node *n2) {
 	return n1 ? n1 : n2 ;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
