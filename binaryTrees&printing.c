@@ -1,9 +1,3 @@
-
-/* Ben Baker
-Lab7
-LAB CODE: 
-
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
