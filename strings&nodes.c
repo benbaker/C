@@ -1,12 +1,3 @@
-/* 					  _    _                                         _      ____  
-	       		     | |  | |                                       | |    |___ \ 
-	 Ben Baker       | |__| | ___  _ __ ___   _____      _____  _ __| | __   __) |
-	 14175659 		 |  __  |/ _ \| '_ ` _ \ / _ \ \ /\ / / _ \| '__| |/ /  |__ <
-	 BPBKT7 		 | |  | | (_) | | | | | |  __/\ V  V / (_) | |  |   <   ___) |
-					 |_|  |_|\___/|_| |_| |_|\___| \_/\_/ \___/|_|  |_|\_\ |____/ 
-
-Can I get extra credit for using function pointers and bad-ass trenary recursions? =D   */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
