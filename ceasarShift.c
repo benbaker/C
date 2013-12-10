@@ -1,7 +1,4 @@
-// Ben Baker
-// Lab 2
 // This program does basic IO and encryption.
-
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,6 +10,7 @@
 
 
 // Prototypes ----------------------------- |
+
 int  i;
 char* encrypt     ( char *string, int K, int N);
 char* decrypt     ( char *string, int K, int N);    
@@ -21,7 +19,6 @@ char* read        ( char *fileName);                 // done
 void  write       ( char* fileName, char* string);
 
 // ---------------------------------------- |
-
 
 int main( int argc, char * argv[] ) {
 
@@ -59,10 +56,6 @@ int main( int argc, char * argv[] ) {
   
 } // end main()
 
-
-
-
-
 // replace char with kth char
 
 char* encrypt( char *string, int K, int N) {
@@ -84,9 +77,6 @@ char* encrypt( char *string, int K, int N) {
   printf("Encrypted: %s\n", string);
   return string;
 } 
-
-
-
 
 char* decrypt( char *string, int K, int N) {
 
@@ -126,10 +116,6 @@ char* read( char *fileName ) {
     return inputString;
 } // end read()
 
-
-
-
-
 void  write( char* fileName, char* string) {
 
   FILE *fout;
@@ -138,8 +124,6 @@ void  write( char* fileName, char* string) {
   fclose(fout);
 
 } // end write()
-
-
 
 int checkOption(char *str) { // done
 
@@ -150,11 +134,6 @@ int checkOption(char *str) { // done
 
 }
 
-
-
-// Utilities ----------------------------- |
-
-
 // Handle and print errors
 int throwError(int err) {
   if (err == 1) {  
@@ -162,8 +141,3 @@ int throwError(int err) {
   if (err == 2) {  
     printf( "\nUnable to open the file\n" ); }
 } // end throwError()
-
-
-// ---------------------------------------- |
-
-
