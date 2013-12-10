@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,6 +20,3 @@ int main()
 	printf("\nThe quotient of %d / %d is %lf\n\n",x,y,quotient);
 
 }
-
-int product(x,y) {
-
