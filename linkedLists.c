@@ -3,9 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 
-// Ben Baker
-
-
 int i;
 
 typedef struct N { 
