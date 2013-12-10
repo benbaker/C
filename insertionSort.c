@@ -140,10 +140,3 @@ int throwError(int err) {
   if (err == 1) {  printf( "\nFilename not provided\n" ); }
   if (err == 2) {  printf( "\nUnable to open the file\n" ); }
 } // end throwError()
-
-
-
-
-
-
-
