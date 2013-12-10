@@ -34,9 +34,6 @@ int deleteNode( date *head, int d, int m, int y ); //  Prompt users for ints day
 void printList( date *n ); // pass in head, walk the content of all nodes, format to sample, order will be reverse.
 
 
-
-
-
 int main( void ) {
 
 	// PPROMPT FOR COUNT
@@ -57,25 +54,19 @@ int main( void ) {
 		printf("Day:"  ); 		scanf("%d", &d);
 		printf("Year:" ); 		scanf("%d", &y);
 
-
 		// MAKE NEW NODE
 		date *justCreated;
 		justCreated = newNode( d, m, y );
-
 
 		// ADD NODE TO LIST
 		head = buildList( head, justCreated );
 		
 
 	}
-		
-
+	
 		// PRINT THE LIST CONTENTS
 		printList( head );
 
-
-
-		
 		// prompt for delete.
 		printf("\nDate to delete:\n");
 		int delM, delD, delY;
@@ -84,52 +75,26 @@ int main( void ) {
 		printf("Year: " );	scanf("%d", &delY);
 		// create node for deletion comparison.
 
-
 		// TEST FOR HEADER
-
-
 		if (delD == head->day
 		    && delM == head->month
 		    && delY == head->year) { 
-
 			head=head->next;
-
 		} else {
-		
-		int deleteMe = deleteNode( head, delD, delM, delY );
-
-
+			int deleteMe = deleteNode( head, delD, delM, delY );
 		if (deleteMe == 1) {
-
 			printf("Deleted item from linked List\n");
-
 		}
-
-
-
 		if (deleteMe == 0) {
-
 			printf("Item not found in list\n");
-
 		}
-
-
-		}
-
-
-
-
-
-		printList( head );
-
-	
-
+	}
+	printList( head );
 
 } // end main()  
 
 
 // DELETE A NODE
-
 int deleteNode( date *head, int d, int m, int y){
 
 	date *currentNode;
@@ -158,18 +123,11 @@ int deleteNode( date *head, int d, int m, int y){
 	tmp = currentNode;
 	currentNode = currentNode->next;
 
-
 	}
-
-return 0;
-
+	return 0;
 }
 
-
-
-
 // PRINT THE LINKED LIST
-
 void printList( date *head ) {
 
 	date *currentNode;
@@ -189,12 +147,7 @@ void printList( date *head ) {
 	}
 }
 
-
-
-
-
 // BUILD LIST OF NODES
-
 date* buildList ( date *currentHead, date *newHead) {
 
 	newHead->next = currentHead;
@@ -203,10 +156,7 @@ date* buildList ( date *currentHead, date *newHead) {
 
 }
 
-
-
 // CREATE A NEW NODE
-
 date* newNode( int d, int m, int y ) {
 
 	date *newNodePtr;
@@ -220,22 +170,7 @@ date* newNode( int d, int m, int y ) {
 
 }
 
-
-
-
-
-
 // HANDLE ERRORS
-
 int err(char *err) {
-
   printf("%s\n", err);
-
-} // end throwError()
-
-
-
-
-
-
-
+} 
