@@ -5,7 +5,7 @@
 
 typedef struct N{
 	int value; 		// integer value of a node
-	int visited; 	// flag 0/1 - for DFS
+	int visited; 	        // flag 0/1 - for DFS
 	int index;		// order of the inserted number
 	struct N* left;
 	struct N* right;
@@ -81,11 +81,11 @@ tree * createNode( int value, int index ) {
 // add node
 tree * addNode( tree * root, tree * branch ) {
 
-	return !root ? branch : 
+	return !root  ? branch : 
 	(root->value  > branch->value) ?
 	(root->left   = addNode(root->left, branch), root):
 	(root->value  < branch->value) ?
-	(root->right   = addNode(root->right, branch), root):
+	(root->right  = addNode(root->right, branch), root):
 	branch;
 
 }
@@ -103,8 +103,6 @@ void displayTree(tree * root) {
     }
 }
 
-
-
 // get number from user
 int getSearchParameters() {
 	printf("\n\nEnter the number for which you want to search: ");
@@ -118,7 +116,6 @@ int search( tree * node, int target ) {
 	target< node->value ? search(node->left, target) : 
 	search(node->right, target);
 }
-
 
 //trace path of search
 int tracePath( tree *node, int target, int count) {
@@ -157,15 +154,5 @@ void levelOrderTraversal( tree *root) {
     	}
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
