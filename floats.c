@@ -1,7 +1,5 @@
 #include <stdio>
 
-
-
 int main (void) {
 
   float myFloat;
@@ -10,5 +8,3 @@ int main (void) {
   printf("%f is your float.\n");
 
 }
-
-
