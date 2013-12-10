@@ -5,8 +5,6 @@
 
 #define MAX 20
 
-
-
 // Prototypes ----------------------------- |
 int readFile      ( char *fileName, char **str1 );
 int  getStringLength  ( char *s1 );
@@ -22,17 +20,17 @@ int i;
 int main( int argc, char * argv[] ) {
 
 
-  // Verify filename
+    // Verify filename
     if (argc != 2) { throwError(1); return 0; } 
 
-  char* str1[MAX];
+    char* str1[MAX];
 
 
-  // allocate memory for array of strings.
+    // allocate memory for array of strings.
 
-  for (i=0; i<MAX; i++) {
+    for (i=0; i<MAX; i++) {
 
-    str1[i] = malloc(sizeof(char)*MAX);
+      str1[i] = malloc(sizeof(char)*MAX);
 
   }
 
@@ -191,7 +189,3 @@ void reverseWithoutPointers (char *s1)
  }
 
 }
-
-// ---------------------------------------- |
-
-
