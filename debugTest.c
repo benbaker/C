@@ -16,3 +16,4 @@ int main() {
 	average = sum / count;
 	printf("\n Average of numbers is %lf \n", average);
 }
+
