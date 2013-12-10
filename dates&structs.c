@@ -5,13 +5,6 @@
 
 #define NODES 10
 
-// Ben Baker
-// 14175659
-// BPBKT7
-
-// 132506
-
-
 int i;
 
 
