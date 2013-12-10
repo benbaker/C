@@ -1,30 +1,41 @@
-// Ben Baker, 14175659, BPBKT7, Section Tuesday
-// Labcode: 61813
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
 
-
 // this program implements selection sort and linear search algorithm
 
 int i;
+int readInput( char *, int ** ); 
+// Takes the input file name and a double integer pointer. 
+// First it opens the input file, create an array by mallocing 
+// right amount of memory (using first number in the first line 
+// as the size of the input).Load the array with the remaining 
+// input and return the size of the input at the end. 
 
-int readInput( char *, int ** ); // Takes the input file name and a double integer pointer. First it opens the input file, create an array by mallocing right amount of memory (using first number in the first line as the size of the input).Load the array with the remaining input and return the size of the input at the end. 
+void selectionSort( int *, int ); 
+// Sorts the integer array using insertion sort algorithm. 
 
-void selectionSort( int *, int ); // This function sorts the integer array using insertion sort algorithm. 
+int binarySearch( int *, int, int, int ); 
+// This function takes an integer array , size of the array and 
+// a number to be searched in the array. If the number is present 
+// in the array it returns the index of that number otherwise display 
+// the message in the main() that the given number is not present in 
+// the array. Easiest way to implement this problem is to implement 
+// linear search algorithm but you can also implement efficient searching 
+// algorithm as discussed in the class.
 
-int binarySearch( int *, int, int, int ); // This function takes an integer array , size of the array and a number to be searched in the array. If the number is present in the array it returns the index of that number otherwise display the message in the main() that the given number is not present in the array. Easiest way to implement this problem is to implement linear search algorithm but you can also implement efficient searching algorithm as discussed in the class.
 
+void printArray( int *, int ); 
+//It takes an integer array and the size of the array as an input and 
+// prints the content of the array as shown in the sample output below.
 
-void printArray( int *, int ); //It takes an integer array and the size of the array as an input and prints the content of the array as shown in the sample output below.
-
-int partialSort(int *, int); // takes integer array and the size of the array and returns the pivot element at the end. 
+int partialSort(int *, int); 
+// takes integer array and the size of the array and returns the 
+// pivot element at the end. 
 
 void swap(int *x,int *y);
-
 
 int main( int argc, char * argv[] ) {
 
@@ -39,7 +50,6 @@ int main( int argc, char * argv[] ) {
 	// insertion sort & report
 	selectionSort( a, size );
 
-
 	// Prompt for search
 	int find  = getNumber(); 
 	// Search for prompted
@@ -47,9 +57,6 @@ int main( int argc, char * argv[] ) {
 
 	// Report search findings
 	found != -1 ? printFound(find,found) : printNotFound(find); // report findings
-
-	// BONUS
-	// partial sort on pivot
 
 	// reset the array
 	if (!(size = readInput(argv[1], &a))) { throwError(2); return 0; }
@@ -63,7 +70,6 @@ int main( int argc, char * argv[] ) {
 	printArray(a, size);
 
 } 
-
 
 // search array and return index
 int binarySearch ( int *a, int low, int high, int target ) {
@@ -79,7 +85,6 @@ int binarySearch ( int *a, int low, int high, int target ) {
         return middle; 
 
 }
-
 
 int readInput(char *name , int **a) {
 
@@ -101,14 +106,11 @@ int readInput(char *name , int **a) {
 		fscanf(ptr, "%d", &num); 
 		*(*a+i)=num; 
 	} 
-
 	// spill and bail
 	fclose(ptr);
 	return size;
 
 } // end read_input()
-
-
 
 // Print array as ints
 void printArray( int *a, int size ) {
@@ -118,7 +120,6 @@ void printArray( int *a, int size ) {
   printf("\n");
 } // end printArray()
 
-
 // Ask user for number to search
 int getNumber() {
 	int num;
@@ -127,9 +128,6 @@ int getNumber() {
 	return num;
 }
 
-
-
-// BONUS
 // Sort on a random pivot
 int partialSort(int *a, int size) {
 
@@ -147,7 +145,6 @@ int partialSort(int *a, int size) {
 	} return f;
 }
 
-
 // swap by pointers
 void swap(int *x,int *y) {
     int temp;
@@ -164,22 +161,21 @@ void selectionSort( int *a, int size ) {
 	printf("\nArray before sorting: \n");
 	printArray(a, size);
 
-  int l = size;
-  int lh, rh, i, temp;
-  for (lh = 0; lh < l; lh++) {
-    rh=lh;
-   for (i=lh; i<l;i++) {
-     if (a[i] < a[rh]) rh=i;
-   } // end for(i<n)
-    temp = a[lh];
-    a[lh] = a[rh];
-    a[rh] = temp;
+  	int l = size;
+  	int lh, rh, i, temp;
+  	for (lh = 0; lh < l; lh++) {
+    		rh=lh;
+   	for (i=lh; i<l;i++) {
+     		if (a[i] < a[rh]) rh=i;
+   	} // end for(i<n)
+    	temp = a[lh];
+    	a[lh] = a[rh];
+	 a[rh] = temp;
   } // end for (lh <n) 
+  
 	printf("Array after sorting: \n");
 	printArray(a, size);
 }
-
-
 
 // Handle search results.
 int printFound( int f, int q) {
@@ -189,16 +185,9 @@ int printNotFound( int f ) {
 	printf("\nNumber %d was not present in the array. \n\n", f ); 
 }
 
-
 // Handle and print errors
 int throwError(int err) {
   if (err == 1) {  printf( "\nFilename not provided\n" ); }
   if (err == 2) {  printf( "\nUnable to open the file\n" ); }
 } // end throwError()
-
-
-
-
-
-
 
