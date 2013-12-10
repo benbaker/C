@@ -32,7 +32,6 @@ int 	 writeOutput( char * fileName, bank *head );
 void 	 printList( bank *head );
 void 	 err( char *);
 
-
 // -----------------------------------------------------------------------|
 // MAIN
 // -----------------------------------------------------------------------|
@@ -65,7 +64,6 @@ int main( int argc, char * argv[] ) {
 
 } 
 
-
 // -----------------------------------------------------------------------|
 // LIST STUFF
 // -----------------------------------------------------------------------|
@@ -75,34 +73,26 @@ bank * buildList( char *fileName ){
 	// Open file & get size
 	FILE *f; int fileSize; f=fopen(fileName,"r"); 
 	fscanf(f, "%d", &fileSize);
-
 	// Instantiate variables for struct
 	int first =1; bank *firstNodePtr; bank *head;
-
 	// Walk file & make nodes
 	for(i=0;i<fileSize;i++) {
-
 		int acct; char *name; float amt; 
 		name = malloc(sizeof(char)*20);
-
 		// Read element properties
 		fscanf(f, "%d%s%f", &acct, name, &amt);
-
 		// Create node from element properties
 		bank *thisNodePtr;
 		thisNodePtr = createNode( name, acct, amt );
-
 		// Hold pointer to first node
 		if (first) { 
 			firstNodePtr = thisNodePtr; 
 			head = NULL; 
 			first=0; 
 		}
-
 		// Put node in linked list
 		head = insertNode(head, thisNodePtr);
 	}
-
 	fclose(f); 
 	return firstNodePtr;
 }
@@ -112,31 +102,21 @@ bank * updateList( char *updateFile, bank *head ){
 	// Open file & get size
 	FILE *f2; int fileSize; f2=fopen(updateFile,"r"); 
 	fscanf(f2, "%d", &fileSize);
-
 	// Walk file & make nodes
 	for(i=0;i<fileSize;i++) {
-
 		int acct; char *name; float amt; 
 		name = malloc(sizeof(char)*20);
-
 		// Read element properties
 		fscanf(f2, "%d%s%f", &acct, name, &amt);
-
 		int nodeFound = 0;
 		nodeFound = checkList(head, name, acct, amt);
-
 		if (nodeFound) { 
-
 			// printf("Updated %s\n", name);
-
 		}  else {
-
 			// printf("Creating %s\n", name);
-
 			// Create node from element properties
 			bank *newNode;
 			newNode = createNode( name, acct, amt );
-
 			// Put node in linked list
 			head = insertNode(head, newNode);
 		}
@@ -146,17 +126,12 @@ bank * updateList( char *updateFile, bank *head ){
 }
 
 int checkList( bank *head, char * s, int acct, float amt ){
-
 	bank * currentNode;
 	currentNode = head;
-
 	int found =0;
-
 	while (currentNode->next != NULL) {
-
 		// printf("Node: %s\n", s);
 		// printf("%-6d%-6d\n", acct, currentNode.accountNumber);
-
 		if(currentNode->accountNumber == acct) {
 			currentNode->amount += amt;
 			return 1;
@@ -198,33 +173,21 @@ bank * insertNode( bank* head, bank* node ){
 
 	bank *thisNode, *lastNode;
 	thisNode = head;
-
 	if (head == NULL){ return node;  }
-
 	while (thisNode->next) {
-
 		if (strcmp( thisNode->name, node->name ) > 0){
-	
 			if (thisNode == head){
-	
-			// printf("putting %s at begining\n", node->name);
-	
 			node->next = head;
 			return node;
-	
 			} else {
-	
 			node->next = thisNode;
 			lastNode->next = node;
 			return head;
-	
 			}
 		}
-		
 		lastNode = thisNode;
 		thisNode=thisNode->next;
 	}
-	
 	printf(" \t");
 	node->next=NULL;
 	thisNode->next = node;
@@ -236,27 +199,21 @@ bank * deleteNode( bank* head ){
 
 	bank *thisNode, *lastNode;
 	thisNode = head;
-
 	// Delete all nodes with negative balances
 	while (thisNode->next) {
-
 		if (thisNode->amount < 0 ) {
 	
 			if (thisNode->accountNumber == head->accountNumber) {
-	
 				// is it the head?
 				bank *tmp;
 				tmp = head;
 				head = thisNode->next;
 				// free(tmp);
-	
 			}
-	
 			// Not the head
 			lastNode->next = thisNode->next;
 			free(thisNode);
 		}
-	
 		lastNode = thisNode;
 		thisNode=thisNode->next;
 	}
@@ -264,17 +221,9 @@ bank * deleteNode( bank* head ){
 	return head;
 }
 
-
-
-
-
-
-
 // -----------------------------------------------------------------------|
 // OUTPUT STUFF
 // -----------------------------------------------------------------------|
-
-
 
 // Write a struct to a file
 int writeOutput( char *fileName, bank *head) {
@@ -282,12 +231,12 @@ int writeOutput( char *fileName, bank *head) {
 	bank *thisNode;
 	thisNode=head;
 
-   // Open & point to file
-   FILE *fout;
-   fout = fopen(fileName, "w");
+   	// Open & point to file
+	FILE *fout;
+	fout = fopen(fileName, "w");
 
-   // Format and print each player
-   while(thisNode->next){
+   	// Format and print each player
+   	while(thisNode->next){
 
 		fprintf(fout, "%-7d%-10s%-8.2f\n"
 		       , thisNode->accountNumber
@@ -295,38 +244,13 @@ int writeOutput( char *fileName, bank *head) {
 		       , thisNode->amount);
 
       thisNode=thisNode->next;
-
    }
-
     fclose(fout);
-
     return 1;
-
-
 }
-
-
-
-
-
-
-
-
 
 // -----------------------------------------------------------------------|
 // UTILITIES 
 // -----------------------------------------------------------------------|
 
-
 void err( char *s ) { printf("\n%s\n", s);}
-
-
-
-
-
-
-
-
-
-
-
